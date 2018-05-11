@@ -1,0 +1,27 @@
+<?php
+class Review_model extends CI_Model {
+	public function process($data)
+	{
+
+		$this->load->database();
+		$this->db->insert('tblInfo',$data);
+
+	}
+	public function process2($id, $data2)
+	{
+
+		$this->load->database();
+		$this->db->where('id',$id);
+		$this->db->update('tblInfo',$data2);
+	}
+
+	public function process3($id, $data3)
+	{
+
+		$this->load->database();
+		$this->db->where('id',$id);
+		$this->db->delete('tblInfo');
+	}
+
+}
+?>
