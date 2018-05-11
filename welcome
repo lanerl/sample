@@ -1,0 +1,8 @@
+
+public function index()
+	{
+		
+		$result = $this->review_model->get_reviews('1');
+		$data = array('ahhh'=>'ehhh');
+		$this->load->view('movie_review', $result);
+	}
